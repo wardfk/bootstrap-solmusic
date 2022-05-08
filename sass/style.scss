@@ -1,0 +1,219 @@
+
+// imports
+
+ 
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    h2{
+        font-size: 4rem;
+    }
+}
+
+header#header{
+    background-color: $darkblue;
+    padding: 30px 0;
+    a{
+        text-decoration: none;
+        color: white;
+        span{
+        color: $red
+        }
+    }
+    .left-login{
+        color: white;
+    }
+    .navbar-toggler{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: $blue;
+        color: white;
+        border-style: none;
+        padding: 5px 8px;
+        border-radius: 5px;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+section#banner{
+    @extend %flex;
+    min-height: 70vh;
+    background-color: $mediumblue;
+    color: white;
+    h1{
+        font-size: 5rem;
+        word-wrap: break-word;
+        span{
+            color: $red;
+        }
+    }
+    a{
+        @extend %linkRounded;
+        text-decoration: none;
+        &:last-of-type{
+            @include linkRounded(
+                $bgc: $blue
+                );
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+
+section#section-one{
+    @extend %flex;
+    min-height: 60vh;
+    p{
+        color: $gray;
+    }
+    a{
+        @extend %linkRounded;
+    }
+}
+
+section#servicios{
+    @extend %flex;
+    min-height: 60vh;
+    background-color: $mediumblue;
+    
+    color: white;
+    h4{
+        margin: 20px 0;
+    }
+    p{
+        color: $gray;
+        margin: 25px 0;
+    }
+    article{
+        div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $red;
+            position: relative;
+            img{
+                position: absolute;
+                left: 50%;
+                top: 20%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    #servicios{
+        background: url(../assets/fondoServicios.jpeg);
+    }
+}
+
+section#artistas{
+    p{
+        color: $gray;
+    }
+    a{
+        text-align: center;
+        text-decoration: none;
+        color: $darkblue;
+        img{
+            @extend %boxRounded;
+            @extend %flex;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        h5{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .artistas{
+        justify-content: space-between;
+    }
+}
+
+section#sellos{
+    background-color: $mediumblue;
+    color: white;
+    h3{
+        font-size: 2rem;
+        color: $red;
+    }
+    p{
+        color: $gray;
+    }
+    a{
+        @extend %linkRounded
+    }
+    ul{
+        background-color: $blue;
+        min-width: 100%;
+        line-height: 3rem;
+        @include boxRounded();
+        list-style-type: none;
+    }
+}
+
+section#lorem{
+    h2{
+        color: $mediumblue;
+    }
+    p{
+        color: $gray;
+    }
+    card{
+        padding: 10px;
+        text-align: center;
+        img{
+            @extend %boxCircle;
+            margin-bottom: 35px;
+        }
+        h4{
+            color: $mediumblue;
+        }
+    }
+}
+
+footer#footer{
+    background-color: $mediumblue;
+    color: white;
+    display: flex;
+    p{
+        text-transform: uppercase;
+        font-size: .7rem;
+        letter-spacing: .08rem;
+    }
+    .footer-left{
+        color: $gray;
+        flex-direction: column;
+        img{
+            max-width: 150px;
+        }
+        span{
+            color: $skyblue;
+        }
+        a{
+            color: $gray;
+        }
+    }
+    
+    .sub-menu{
+        display: flex;
+        order: 0;
+        flex-direction: column;
+        a{
+            display: flex;
+            flex-direction: column;
+            line-height: 2rem;
+            text-decoration: none;
+            color: $gray;
+        }
+    }
+}

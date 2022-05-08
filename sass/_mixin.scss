@@ -1,0 +1,70 @@
+
+// display flex
+
+@mixin flex($disp: flex,$jc: center, $ai: center, $fw: nowrap) {
+    display: $disp;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $fw;
+}
+
+%flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// w100 vh100
+
+@mixin screen(){
+    width: 100%;
+    min-height: 100vh;
+}
+
+// link radius 50px
+
+@mixin linkRounded ($pad: 20px 50px, $round: 50px, $bgc: $red, $texttr: uppercase, $tcolor: white) {
+    padding: $pad;
+    border-radius: $round;
+    background-color: $bgc;
+    text-transform: $texttr;
+    color: white;
+    text-decoration: none;
+}
+
+%linkRounded{
+    padding: 20px 50px;
+    border-radius: 50px;
+    background-color: $red;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+// box radius 40px
+
+@mixin boxRounded ($round: 40px, $width: 220px, $height: 220px) {
+    border-radius: $round;
+    width: $width;
+    min-height: $height;
+}
+
+%boxRounded{
+    border-radius: 40px;
+    width: 220px;
+    min-height: 220px;
+}
+
+// box radius 50% 
+
+@mixin boxCircle ($round: 50%, $width: 180px, $height: 180px){
+    border-radius: $round;
+    width: $width;
+    min-height: $height;
+}
+
+%boxCircle{
+    border-radius: 50%;
+    width: 180px;
+    min-height: 180px;
+}
